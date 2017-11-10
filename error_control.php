@@ -11,6 +11,8 @@ require './menu.php';
  */
 display_value('h3', 'Error control operators.');
 
-var_dump($var); // This will cause an 'Undefined variable' notice.
+//var_dump($var); // This will cause an 'Undefined variable' notice.
 
 @var_dump($var); // This will suppress the 'Undefined variable' notice because of the prepended @ symbol.
+
+@($foo += $bar);

@@ -51,7 +51,7 @@ else {
   display_value('p', var_export($var, true) . ' and ' . var_export($var2, true) . ' are equal.');
 }
 
-// Not identical operator "!=". This operator checks if two values are not identical.
+// Not identical operator "!==". This operator checks if two values are not identical.
 display_value('h4', 'Not identical operator.');
 if ($var !== $var2) {
   display_value('p', var_export($var, true) . ' and ' . var_export($var2, true) . ' are not identical.');
@@ -99,7 +99,7 @@ else {
   display_value('p', var_export($var, true) . ' is not greater than ' . var_export($var2, true) . '.');
 }
 
-// Greater than or equal to operator "<=". This operator checks if the left operand is less than or equal to
+// Greater than or equal to operator ">=". This operator checks if the left operand is less than or equal to
 // the right operand
 $var = 5;
 display_value('h4', 'Greater than or equal to operator.');
@@ -128,7 +128,7 @@ display_value('p', var_dump(TRUE == "")); // "" will be converted to boolean FAL
 
 display_value('h4', 'Comparing different types.');
 
-// When comparing array the one with fewer members is less.
+// When comparing arrays the one with fewer members is less.
 display_value('p', 'array(1, 2) <= array(1, 2, 3): ' . var_export(array(1, 2) <= array(1, 2, 3), true));
 
 display_value('p', 'array(1, 2) == array(1, 2): ' . var_export(array(1, 2) == array(1, 2), true));

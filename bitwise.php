@@ -70,14 +70,15 @@ $var = 15 ^ 12;
 display_value('p', '15 ^ 12 = ' . $var);
 
 /*
- * The Not operator "~". This operator is slightly different to those seen so far as it only has a single operand. It returns
- * an integer which contains a 1 for each position in the operand that contains a 0 and a 0 for each position in the
- * operand that contains a 1. Essentially switching the 1's in the operand for 0's and the 0's in the operand for 1's.
+ * The Not operator "~". This operator is slightly different to those seen so far as it only has a single operand. It
+ * returns an integer which contains a 1 for each position in the operand that contains a 0 and a 0 for each position
+ * in the operand that contains a 1. Essentially switching the 1's in the operand for 0's and the 0's in the operand
+ * for 1's.
  */
 display_value('h4', 'The "~" operator.');
 
-$pos_dec = 9;
-$neg_dec = ~ $pos_dec;
+$pos_dec = 9; // 1001
+$neg_dec = ~ $pos_dec; // 0110
 display_value('p', '$pos_dec = ' . var_export($pos_dec, true));
 display_value('p', '$neg_dec = ' . var_export($neg_dec, true));
 display_value('p', '$pos_int = ' . var_export(decbin($pos_dec), true));
@@ -87,10 +88,10 @@ display_value('p', '$neg_int = ' . var_export(decbin($neg_dec), true));
 // The Shift left operator "<<". This operator shifts the bits in the left operand to the right the number
 // of positions in the right operand (multiply by 2).
 display_value('h4', 'The "<<" operator.');
-$var = 10;
+$var = 10; // 1010
 display_value('p', 'Decimal ' . $var . ' = binary ' . decbin($var));
 $var2 = 2;
-$var3 = $var << $var2;
+$var3 = $var << $var2; // 101000
 display_value('p', 'Decimal ' . $var3 . ' = binary ' . decbin($var3));
 
 // The Shift left operator has the same effect as multiplying the left operand by 2, the number of
@@ -105,10 +106,10 @@ display_value('p', 'Decimal ' . $var4 . ' = binary ' . decbin($var4)); // This w
 // The Shift right operator ">>". This operator shifts the bits in the left operand to the left the number
 // of positions right in the right operand (divide by 2).
 display_value('h4', 'The ">>" operator.');
-$var = 10;
+$var = 10; // 1010
 display_value('p', 'Decimal ' . $var . ' = binary ' . decbin($var));
 $var2 = 2;
-$var3 = $var >> $var2;
+$var3 = $var >> $var2; // 10
 display_value('p', 'Decimal ' . $var3 . ' = binary ' . decbin($var3));
 
 // The Shift right operator has the same effect as dividing the left operand by 2, the number of

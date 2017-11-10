@@ -55,6 +55,7 @@ else {
 
 var_dump(1 Xor 0); // This will return true as the "Xor" operator does not care about type.
 var_dump('1' Xor '1'); // This will return false as BOTH of the operands are equal to true.
+var_dump(0 Xor 0); // This will return false as BOTH of the operands are not equal to true.
 
 
 // "!" operator returns true if the operand is not equal to true.
@@ -63,6 +64,18 @@ $var = TRUE;
 $var2 = FALSE;
 var_dump(!$var);
 var_dump(!$var2);
+if ( !$var ) {
+  display_value('p', '$var is false');
+}
+else {
+  display_value('p', '$var is true');
+}
+if ( !$var2 ) {
+  display_value('p', '$var2 is false');
+}
+else {
+  display_value('p', '$var2 is true');
+}
 
 
 // "&&" operator is identical to the "and" operator accept for that it has a higher precedence.

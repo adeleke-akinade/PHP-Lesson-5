@@ -37,7 +37,7 @@ display_value('p', $var2); // This will contains 10.
 
 // Assigning by reference. When you assign by reference, both operand point to the same piece of data.
 display_value('h4', 'Assigning by reference.');
-// Predending the operand on the right with an "&" symbol causes the expression to be assigned by reference not value.
+// Prepending the operand on the right with an "&" symbol causes the expression to be assigned by reference not value.
 // $var2 and $var3 will both point to the same piece of data meaning that changing one will change the other.
 $var3 = &$var2;
 $var3 /= 2;

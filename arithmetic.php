@@ -39,12 +39,13 @@ function foo($var) {
 }
 
 foreach ($array as $value) {
-  @display_value('p', var_export($value, true) . ' converts to ' . +$value);
+  @($converted = +$value);
+  @display_value('p', var_export($value, true) . ' converts to ' . gettype($converted) . ' ' . $converted);
 }
 
 
-// Negation: the negation operator inverts a value. For example, the value "2" will be inverted to "-2" and the value "2.1"
-// will be inverted to "-2.1".
+// Negation: the negation operator inverts a value. For example, the value "2" will be inverted to "-2" and the value
+// "2.1" will be inverted to "-2.1".
 display_value('h3', 'Negation.');
 
 display_values_and_types('p', array($var, -$var, $var2, -$var2));
@@ -160,8 +161,8 @@ foreach ($array as $value) {
   // Modulo by 0 will result in a fatal error as you cannot divide by 0.
   if (@($value != 0)) {
     $result = @(5 % $value);
+    @display_value('p', '5 % ' . gettype($value) . ' ' . var_export($value, true) . ' = ' . gettype($result) . ' ' . $result);
   }
-  @display_value('p', '5 % ' . gettype($value) . ' ' . var_export($value, true) . ' = ' . gettype($result) . ' ' . $result);
 }
 
 

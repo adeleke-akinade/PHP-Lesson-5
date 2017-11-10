@@ -36,6 +36,7 @@ $var = 2;
 // This will be evaluated as "('Total: ' . $var) + 4" which results in 4 because strings that are non-numeric
 // and do not begin with a number have a value of 0.
 @display_value('p', 'Total: ' . $var + 3);
+@display_value('p', $var . 'Total: ' + 3);
 
 // The use of parenthesis cause the "''Total: ' string to be concatenated to the sum of "$var + 4".
 @display_value('p', 'Total: = ' . ($var + 3));
